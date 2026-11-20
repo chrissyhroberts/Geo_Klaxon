@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    android:gravity="center_horizontal" android:padding="8dp" android:background="@drawable/widget_background">
+    <TextView android:id="@+id/widget_title" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="GEOKLAXON!"
+        android:textColor="#FFEA00" android:textSize="11sp" android:textStyle="bold"
+        android:gravity="center" android:maxLines="1" />
+    <TextView android:id="@+id/widget_distance" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="DISTANCE UNKNOWN"
+        android:textColor="#FFEA00" android:textSize="10sp" android:textStyle="bold"
+        android:gravity="center" android:maxLines="1" />
+    <Chronometer android:id="@+id/widget_countdown" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center" android:textColor="#FFEA00"
+        android:textSize="18sp" android:textStyle="bold" android:visibility="gone" />
+    <TextView android:id="@+id/widget_update" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="GPS: NO FIX"
+        android:textColor="#D0C5D8" android:textSize="9sp" android:gravity="center" android:maxLines="1" />
+    <!-- TextView is RemoteViews-safe; it provides the flexible middle space. -->
+    <TextView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:text="" />
+    <ImageView android:id="@+id/widget_icon" android:layout_width="32dp"
+        android:layout_height="32dp" android:layout_marginBottom="4dp" android:src="@drawable/ic_klaxon"
+        android:scaleType="centerInside" android:contentDescription="GeoKlaxon" />
+    <TextView android:id="@+id/widget_toggle" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="TAP TO ARM"
+        android:textColor="#05F7E8" android:textSize="10sp" android:textStyle="bold"
+        android:gravity="center" android:maxLines="1" />
+</LinearLayout>

@@ -1,0 +1,860 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.750031,
+          55.93329
+        ]
+      },
+      "properties": {
+        "name": "Greenock",
+        "region": "Inverclyde",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.379882,
+          54.903407
+        ]
+      },
+      "properties": {
+        "name": "Sunderland",
+        "region": "Tyne and Wear",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.399977,
+          50.900031
+        ]
+      },
+      "properties": {
+        "name": "Southampton",
+        "region": "Southampton",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.583315,
+          51.449998
+        ]
+      },
+      "properties": {
+        "name": "Bristol",
+        "region": "Bristol",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.90005,
+          50.72999
+        ]
+      },
+      "properties": {
+        "name": "Bournemouth",
+        "region": "Bournemouth",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.300004,
+          54.600012
+        ]
+      },
+      "properties": {
+        "name": "Omagh",
+        "region": "Omagh",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.902965,
+          53.186325
+        ]
+      },
+      "properties": {
+        "name": "Chester",
+        "region": "Cheshire",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.950002,
+          51.629987
+        ]
+      },
+      "properties": {
+        "name": "Swansea",
+        "region": "Swansea",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.929987,
+          54.879995
+        ]
+      },
+      "properties": {
+        "name": "Carlisle",
+        "region": "Cumbria",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.719997,
+          51.550018
+        ]
+      },
+      "properties": {
+        "name": "Southend-on-Sea",
+        "region": "Southend-on-Sea",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.980028,
+          51.469971
+        ]
+      },
+      "properties": {
+        "name": "Reading",
+        "region": "Oxfordshire",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.133249,
+          52.629977
+        ]
+      },
+      "properties": {
+        "name": "Leicester",
+        "region": "Leicester",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.754465,
+          53.791675
+        ]
+      },
+      "properties": {
+        "name": "Bradford",
+        "region": "West Yorkshire",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.499997,
+          53.366677
+        ]
+      },
+      "properties": {
+        "name": "Sheffield",
+        "region": "South Yorkshire",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.112076,
+          56.816478
+        ]
+      },
+      "properties": {
+        "name": "Fort William",
+        "region": "Highland",
+        "minZoom": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.61668,
+          55.4504
+        ]
+      },
+      "properties": {
+        "name": "Ayr",
+        "region": "South Ayrshire",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.10505,
+          57.145133
+        ]
+      },
+      "properties": {
+        "name": "Aberdeen",
+        "region": "Aberdeen",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.436375,
+          56.392609
+        ]
+      },
+      "properties": {
+        "name": "Perth",
+        "region": "Perthshire and Kinross",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.000008,
+          56.470389
+        ]
+      },
+      "properties": {
+        "name": "Dundee",
+        "region": "Dundee",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.230013,
+          54.580375
+        ]
+      },
+      "properties": {
+        "name": "Middlesbrough",
+        "region": "Stockton-on-Tees",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.502675,
+          52.400741
+        ]
+      },
+      "properties": {
+        "name": "Coventry",
+        "region": "West Midlands",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.350022,
+          51.383749
+        ]
+      },
+      "properties": {
+        "name": "Bath",
+        "region": "Bath and North East Somerset",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.52995,
+          50.700405
+        ]
+      },
+      "properties": {
+        "name": "Exeter",
+        "region": "Devon",
+        "minZoom": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.116623,
+          52.200391
+        ]
+      },
+      "properties": {
+        "name": "Cambridge",
+        "region": "Cambridgeshire",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.329991,
+          53.750426
+        ]
+      },
+      "properties": {
+        "name": "Kingston upon Hull",
+        "region": "Kingston upon Hull",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.333284,
+          55.000375
+        ]
+      },
+      "properties": {
+        "name": "Londonderry/Derry",
+        "region": "Derry",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.047723,
+          54.51034
+        ]
+      },
+      "properties": {
+        "name": "Lisburn",
+        "region": "Dungannon",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.550034,
+          50.133722
+        ]
+      },
+      "properties": {
+        "name": "Penzance",
+        "region": "Cornwall",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.072104,
+          53.951168
+        ]
+      },
+      "properties": {
+        "name": "York",
+        "region": "York",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.050005,
+          53.830395
+        ]
+      },
+      "properties": {
+        "name": "Blackpool",
+        "region": "Lancashire",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.550001,
+          55.06709
+        ]
+      },
+      "properties": {
+        "name": "Dumfries",
+        "region": "Dumfries and Galloway",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.429984,
+          54.280394
+        ]
+      },
+      "properties": {
+        "name": "Scarborough",
+        "region": "North Yorkshire",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.159989,
+          50.385386
+        ]
+      },
+      "properties": {
+        "name": "Plymouth",
+        "region": "Plymouth",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.169995,
+          52.070347
+        ]
+      },
+      "properties": {
+        "name": "Ipswich",
+        "region": "Suffolk",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.300013,
+          52.630365
+        ]
+      },
+      "properties": {
+        "name": "Norwich",
+        "region": "Norfolk",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.169974,
+          50.830346
+        ]
+      },
+      "properties": {
+        "name": "Brighton",
+        "region": "Brighton and Hove",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.950011,
+          58.966981
+        ]
+      },
+      "properties": {
+        "name": "Kirkwall",
+        "region": "Moray",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.233266,
+          57.467124
+        ]
+      },
+      "properties": {
+        "name": "Inverness",
+        "region": "Highland",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.248076,
+          51.751828
+        ]
+      },
+      "properties": {
+        "name": "Oxford",
+        "region": "Oxfordshire",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.420011,
+          51.880359
+        ]
+      },
+      "properties": {
+        "name": "Luton",
+        "region": "Luton",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.080022,
+          50.800348
+        ]
+      },
+      "properties": {
+        "name": "Portsmouth",
+        "region": "Portsmouth",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.248404,
+          52.567187
+        ]
+      },
+      "properties": {
+        "name": "Peterborough",
+        "region": "Peterborough",
+        "minZoom": 6.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.165706,
+          52.941084
+        ]
+      },
+      "properties": {
+        "name": "Nottingham",
+        "region": "Nottingham",
+        "minZoom": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.180007,
+          53.000368
+        ]
+      },
+      "properties": {
+        "name": "Stoke",
+        "region": "Stoke-on-Trent",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.300013,
+          51.133712
+        ]
+      },
+      "properties": {
+        "name": "Dover",
+        "region": "Kent",
+        "minZoom": 6.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.219091,
+          55.948328
+        ]
+      },
+      "properties": {
+        "name": "Edinburgh",
+        "region": "Edinburgh",
+        "minZoom": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.611625,
+          54.989742
+        ]
+      },
+      "properties": {
+        "name": "Newcastle",
+        "region": "Tyne and Wear",
+        "minZoom": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.961934,
+          53.405068
+        ]
+      },
+      "properties": {
+        "name": "Liverpool",
+        "region": "Merseyside",
+        "minZoom": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.167598,
+          51.482619
+        ]
+      },
+      "properties": {
+        "name": "Cardiff",
+        "region": "Cardiff",
+        "minZoom": 5.1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.083362,
+          58.433293
+        ]
+      },
+      "properties": {
+        "name": "Wick",
+        "region": "Highland",
+        "minZoom": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.551348,
+          53.790017
+        ]
+      },
+      "properties": {
+        "name": "Leeds",
+        "region": "West Yorkshire",
+        "minZoom": 5.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.149992,
+          60.150035
+        ]
+      },
+      "properties": {
+        "name": "Lerwick",
+        "region": "Aberdeen",
+        "minZoom": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.248685,
+          53.47532
+        ]
+      },
+      "properties": {
+        "name": "Manchester",
+        "region": "Manchester",
+        "minZoom": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.921943,
+          52.47692
+        ]
+      },
+      "properties": {
+        "name": "Birmingham",
+        "region": "West Midlands",
+        "minZoom": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.928178,
+          54.594245
+        ]
+      },
+      "properties": {
+        "name": "Belfast",
+        "region": "Belfast",
+        "minZoom": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.239101,
+          55.86227
+        ]
+      },
+      "properties": {
+        "name": "Glasgow",
+        "region": "Glasgow",
+        "minZoom": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.118668,
+          51.501941
+        ]
+      },
+      "properties": {
+        "name": "London",
+        "region": "Westminster",
+        "minZoom": 1.7
+      }
+    }
+  ]
+}

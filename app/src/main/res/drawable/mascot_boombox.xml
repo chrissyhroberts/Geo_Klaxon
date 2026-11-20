@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="140dp" android:height="110dp"
+    android:viewportWidth="140" android:viewportHeight="110">
+    <!-- Cartoon radio chassis -->
+    <path android:fillColor="#05F7E8" android:pathData="M16,22 L124,22 L132,92 L8,92z"/>
+    <path android:fillColor="#FF37B7" android:pathData="M23,29 L117,29 L123,84 L17,84z"/>
+    <!-- Handle -->
+    <path android:strokeColor="#FFEB00" android:strokeWidth="7" android:fillColor="#00000000"
+        android:pathData="M49,22 L49,11 L91,11 L91,22"/>
+    <!-- Speaker rings -->
+    <path android:fillColor="#27103E" android:pathData="M29,57 a17,17 0,1 0,34 0 a17,17 0,1 0,-34 0"/>
+    <path android:fillColor="#FFEB00" android:pathData="M37,57 a9,9 0,1 0,18 0 a9,9 0,1 0,-18 0"/>
+    <path android:fillColor="#27103E" android:pathData="M77,57 a17,17 0,1 0,34 0 a17,17 0,1 0,-34 0"/>
+    <path android:fillColor="#FFEB00" android:pathData="M85,57 a9,9 0,1 0,18 0 a9,9 0,1 0,-18 0"/>
+    <!-- Sunglasses and cheeky grin -->
+    <path android:fillColor="#150726" android:pathData="M43,33 L67,33 L65,45 L46,45z M73,33 L97,33 L94,45 L75,45z M65,36 L75,36 L75,40 L65,40z"/>
+    <path android:strokeColor="#150726" android:strokeWidth="4" android:fillColor="#00000000"
+        android:pathData="M57,75 Q70,86 83,75"/>
+    <!-- Electric sparks -->
+    <path android:fillColor="#FFEB00" android:pathData="M5,11 L20,6 L16,17 L28,15 L8,33 L12,20 L0,23z M129,1 L121,13 L135,12 L119,32 L123,18 L113,18z"/>
+    <!-- Feet -->
+    <path android:fillColor="#FFEB00" android:pathData="M27,92 h15 v7 h-15z M98,92 h15 v7 h-15z"/>
+</vector>

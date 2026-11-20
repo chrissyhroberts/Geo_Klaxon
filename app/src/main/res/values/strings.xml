@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GeoKlaxon!</string>
+    <string name="widget_name">GeoKlaxon preset</string>
+    <string name="widget_description">Arm or disarm an alarm preset directly</string>
+</resources>

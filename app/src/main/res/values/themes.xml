@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.GeoKlaxon" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#150A26</item>
+        <item name="android:navigationBarColor">#150A26</item>
+    </style>
+</resources>
