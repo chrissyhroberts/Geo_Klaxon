@@ -1,4 +1,4 @@
-# GeoKlaxon! — Android 0.2.0
+# GeoKlaxon! — Android 0.2.1
 
 **This directory contains actual source code**, created as a fresh project rather than copied from the earlier GeoKlaxon archives. It is **not an APK** and has not yet passed a full Android/Gradle build or been tested on a phone.
 

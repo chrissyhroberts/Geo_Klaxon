@@ -1,3 +1,17 @@
+# GeoKlaxon 0.2.1
+
+## Fixes
+
+- Fixed timer countdown consistency across the home screen, widget and lock notification.
+- Replaced the widget chronometer with a live refreshed countdown, including vertical long-duration formatting.
+- Removed the widget mascot icon to reclaim 1×1 widget space.
+- Fixed `+1 MIN` to extend from the timer’s actual remaining duration.
+- Corrected timer rocker snapping and zero-value handling.
+
+## Notes
+
+- This source release has not yet had a fresh APK built in the constrained environment.
+
 # GeoKlaxon 0.2.0
 
 ## Highlights

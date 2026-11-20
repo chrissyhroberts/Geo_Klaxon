@@ -7,6 +7,8 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Handler
+import android.os.Looper
 import androidx.core.app.NotificationCompat
 import java.text.SimpleDateFormat
 import java.time.Instant
@@ -22,10 +24,14 @@ object TimedAlarmNotification {
     const val TOGGLE="com.geoklaxon.TOGGLE_TIMED_ALARM"
     const val TOGGLE_PAUSE="com.geoklaxon.TOGGLE_TIMER_PAUSE"
     const val ADD_MINUTE="com.geoklaxon.ADD_TIMER_MINUTE"
+    private val handler=Handler(Looper.getMainLooper())
+    private var refreshContext:Context?=null
+    private val liveRefresh=Runnable { refreshContext?.let(::sync) }
     const val EXTRA_ID="preset_id"
 
     fun sync(context:Context) {
         val c=context.applicationContext
+        handler.removeCallbacks(liveRefresh)
         val manager=c.getSystemService(NotificationManager::class.java)
         manager.createNotificationChannel(NotificationChannel(CHANNEL,"GeoKlaxon timed alarms",NotificationManager.IMPORTANCE_LOW).apply {
             description="Persistent status for armed clock alarms"
@@ -33,13 +39,15 @@ object TimedAlarmNotification {
         })
         val alarm=AlarmStore(c).list().firstOrNull { it.enabled && (it.type==TriggerType.TIME || it.type==TriggerType.TIMER) }
         if(alarm==null) {
+            refreshContext=null
             manager.cancel(NOTIFICATION)
             return
         }
         val next=runCatching {
             if(alarm.type==TriggerType.TIMER) {
                 val started=if(alarm.timerStartedAt>0L) alarm.timerStartedAt else System.currentTimeMillis()
-                Instant.ofEpochMilli(started+alarm.timerSeconds*1000L)
+                val duration=if(alarm.timerRemainingSeconds>0) alarm.timerRemainingSeconds else alarm.timerSeconds
+                Instant.ofEpochMilli(started+duration*1000L)
             }
             else ClockLogic.nextTime(alarm,Instant.now(),ZoneId.systemDefault())
         }.getOrNull()
@@ -81,15 +89,18 @@ object TimedAlarmNotification {
             .setStyle(NotificationCompat.BigTextStyle().bigText(whenText))
             .setCategory(NotificationCompat.CATEGORY_ALARM)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+            .setShowWhen(false)
             .setContentIntent(open)
             .setOngoing(true)
             .setOnlyAlertOnce(true)
-        if(alarm.type==TriggerType.TIMER && !alarm.timerPaused && next!=null)
-            builder.setWhen(next.toEpochMilli()).setUsesChronometer(true).setChronometerCountDown(true)
         if(alarm.type==TriggerType.TIMER) builder.addAction(0,if(alarm.timerPaused) "RESUME" else "PAUSE",pause)
         if(alarm.type==TriggerType.TIMER) builder.addAction(0,"+1 MIN",addMinute)
         builder.addAction(0,"DISARM",toggle)
         manager.notify(NOTIFICATION,builder.build())
+        if(alarm.type==TriggerType.TIMER && !alarm.timerPaused) {
+            refreshContext=c
+            handler.postDelayed(liveRefresh,1000L)
+        } else refreshContext=null
     }
 
     private fun formatDuration(seconds:Int):String {

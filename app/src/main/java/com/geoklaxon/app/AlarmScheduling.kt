@@ -76,10 +76,11 @@ object ClockScheduler {
         if(a.type!=TriggerType.TIMER || !a.enabled) return
         val now=System.currentTimeMillis()
         val started=if(a.timerStartedAt>0L) a.timerStartedAt else now
-        val duration=if(a.timerPaused) a.timerRemainingSeconds else a.timerSeconds
+        val duration=if(a.timerPaused) a.timerRemainingSeconds
+        else ((started+a.timerSeconds*1000L-now+999L)/1000L).toInt().coerceAtLeast(0)
         val extended=(duration+60).coerceAtMost(604800)
         val updated=if(a.timerPaused) a.copy(timerRemainingSeconds=extended)
-        else a.copy(timerStartedAt=started-60_000L)
+        else a.copy(timerStartedAt=now,timerSeconds=extended,timerRemainingSeconds=0)
         AlarmStore(c).put(updated)
         if(!updated.timerPaused) schedule(c,updated)
     }

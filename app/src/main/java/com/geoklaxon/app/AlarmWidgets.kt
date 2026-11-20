@@ -11,7 +11,8 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.net.Uri
 import android.os.Bundle
-import android.os.SystemClock
+import android.os.Handler
+import android.os.Looper
 import android.widget.RemoteViews
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -37,10 +38,18 @@ import kotlin.math.roundToInt
 class WidgetProvider: AppWidgetProvider() {
     companion object {
         private const val TOGGLE="com.geoklaxon.WIDGET_TOGGLE"
+        private val handler=Handler(Looper.getMainLooper())
+        private var refreshContext:Context?=null
+        private val liveRefresh=Runnable { refreshContext?.let { refreshAll(it) } }
         fun refreshAll(c: Context) {
             val mgr=AppWidgetManager.getInstance(c)
             val ids=mgr.getAppWidgetIds(ComponentName(c,WidgetProvider::class.java))
             ids.forEach { update(c,mgr,it) }
+            handler.removeCallbacks(liveRefresh)
+            if(AlarmStore(c).list().any { it.enabled && it.type==TriggerType.TIMER }) {
+                refreshContext=c.applicationContext
+                handler.postDelayed(liveRefresh,1000L)
+            } else refreshContext=null
         }
         fun update(c:Context,manager:AppWidgetManager,widgetId:Int) {
             val store=AlarmStore(c)
@@ -77,7 +86,7 @@ class WidgetProvider: AppWidgetProvider() {
             rv.setViewVisibility(R.id.widget_countdown,if(timer && a?.timerPaused!=true) android.view.View.VISIBLE else android.view.View.GONE)
             if(timer && a!=null && !a.timerPaused) {
                 val remaining=timerRemaining(a)
-                rv.setChronometer(R.id.widget_countdown,SystemClock.elapsedRealtime()+remaining*1000L,"%s",true)
+                rv.setTextViewText(R.id.widget_countdown,formatWidgetCountdown(remaining))
                 rv.setTextViewText(R.id.widget_update,"TAP TO PAUSE")
             } else rv.setTextViewText(R.id.widget_update,when {
                 a?.type==TriggerType.TIMER && a.timerPaused -> "PAUSED • TAP TO RESUME"
@@ -122,6 +131,14 @@ class WidgetProvider: AppWidgetProvider() {
             val started=if(a.timerStartedAt>0L) a.timerStartedAt else System.currentTimeMillis()
             val duration=if(a.timerRemainingSeconds>0) a.timerRemainingSeconds else a.timerSeconds
             return ((started+duration*1000L-System.currentTimeMillis()+999L)/1000L).toInt().coerceAtLeast(0)
+        }
+        private fun formatWidgetCountdown(seconds:Int):String {
+            val days=seconds/86400
+            val hours=(seconds%86400)/3600
+            val minutes=(seconds%3600)/60
+            val secs=seconds%60
+            return if(days>0) "${days}d\n${hours}h\n${minutes}m\n${secs}s"
+            else "%02dh\n%02dm\n%02ds".format(Locale.getDefault(),hours,minutes,secs)
         }
         private fun locationUpdate(location:Location?):String = if(location==null) "GPS: NO FIX"
         else "GPS: ${SimpleDateFormat("HH:mm",Locale.getDefault()).format(Date(location.time))}"

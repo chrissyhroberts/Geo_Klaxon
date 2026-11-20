@@ -600,9 +600,9 @@ private fun TimerDurationPickers(seconds:Int,onChange:(Int)->Unit) {
 
 @Composable
 private fun TimerWheel(label:String,value:Int,min:Int,max:Int,modifier:Modifier,onValueChange:(Int)->Unit) {
-    val state=rememberLazyListState(initialFirstVisibleItemIndex=(value-min-1).coerceIn(0,max-min))
+    val state=rememberLazyListState(initialFirstVisibleItemIndex=(value-min).coerceIn(0,max-min))
     LaunchedEffect(value) {
-        val target=(value-min-1).coerceIn(0,max-min)
+        val target=(value-min).coerceIn(0,max-min)
         if(state.firstVisibleItemIndex!=target) state.scrollToItem(target)
     }
     LaunchedEffect(Unit) {
@@ -611,7 +611,12 @@ private fun TimerWheel(label:String,value:Int,min:Int,max:Int,modifier:Modifier,
             if(scrolling) {
                 wasScrolling=true
             } else if(wasScrolling) {
-                onValueChange((min+state.firstVisibleItemIndex+1).coerceIn(min,max))
+                val viewport=state.layoutInfo.viewportStartOffset..state.layoutInfo.viewportEndOffset
+                val centre=(viewport.first+viewport.last)/2
+                val selected=state.layoutInfo.visibleItemsInfo.minByOrNull {
+                    kotlin.math.abs((it.offset+it.size/2)-centre)
+                }?.index ?: state.firstVisibleItemIndex
+                onValueChange((min+selected).coerceIn(min,max))
                 wasScrolling=false
             }
         }
