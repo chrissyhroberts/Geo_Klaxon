@@ -15,4 +15,6 @@
 
 - Timer alarms are one-shot only and require a non-zero duration.
 - `TIME & PLACE` remains the user-facing name for the combined trigger type.
+- Debug APK: `release/GeoKlaxon-0.2.0-debug.apk`.
+- APK SHA-256: `20b1d5ee79976e48841f6796a9b131502ec397c9c87b132746d43e1b914f69c2`.
 - Android Studio/device verification is still required before treating this as production-ready.

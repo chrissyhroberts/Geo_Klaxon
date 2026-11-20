@@ -29,6 +29,10 @@
 
 ## Permission setup
 
+## APK asset
+
+The debug APK is available at [release/GeoKlaxon-0.2.0-debug.apk](release/GeoKlaxon-0.2.0-debug.apk). SHA-256: `20b1d5ee79976e48841f6796a9b131502ec397c9c87b132746d43e1b914f69c2`.
+
 - Android 10+: grant precise foreground location and **Allow all the time** background location through system settings (Android 11+).
 - Android 13+: grant notifications. Android 12+: grant **Alarms & reminders** for precise clock delivery.
 - Android 14+: full-screen alert special access may be restricted; check system settings if lock-screen UI does not appear.
